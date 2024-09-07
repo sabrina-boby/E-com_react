@@ -23,22 +23,22 @@ const Footer = () => {
               <ul>
                 <h3>About US</h3>
                 <li>
-                  <a href="#">Master Plan</a>
+                  <a href="/">Master Plan</a>
                 </li>
                 <li>
-                  <a href="#">Jobs</a>
+                  <a href="/">Jobs</a>
                 </li>
                 <li>
-                  <a href="#">Invest</a>
+                  <a href="/">Invest</a>
                 </li>
                 <li>
-                  <a href="#">Pressroom</a>
+                  <a href="/">Pressroom</a>
                 </li>
                 <li>
-                  <a href="#">Blog</a>
+                  <a href="/">Blog</a>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <a href="/">Contact</a>
                 </li>
               </ul>
             </div>
@@ -46,16 +46,16 @@ const Footer = () => {
               <ul>
                 <h3>Explore EEVE</h3>
                 <li>
-                  <a href="#">Unlock my Robot Power</a>
+                  <a href="/">Unlock my Robot Power</a>
                 </li>
                 <li>
-                  <a href="#">Starlight</a>
+                  <a href="/">Starlight</a>
                 </li>
                 <li>
-                  <a href="#">Robot Platform</a>
+                  <a href="/">Robot Platform</a>
                 </li>
                 <li>
-                  <a href="#">EEVE Roadmap</a>
+                  <a href="/">EEVE Roadmap</a>
                 </li>
               </ul>
             </div>
@@ -63,13 +63,13 @@ const Footer = () => {
               <ul>
                 <h3>Community & Support</h3>
                 <li>
-                  <a href="#">Willow X Community</a>
+                  <a href="/">Willow X Community</a>
                 </li>
                 <li>
-                  <a href="#">Developer & Maker Access</a>
+                  <a href="/">Developer & Maker Access</a>
                 </li>
                 <li>
-                  <a href="#">Special Cases</a>
+                  <a href="/">Special Cases</a>
                 </li>
               </ul>
             </div>
@@ -78,28 +78,28 @@ const Footer = () => {
           <div className="footer-down">
             <div className="footer-bottom">
               <div className="social-icons">
-                <a href="#">
+                <a href="/">
                   <img src={facebook} alt="" />
                 </a>
-                <a href="#">
+                <a href="/">
                   <img src={instagram} alt="" />
                 </a>
-                <a href="#">
+                <a href="/">
                   <img src={twitter} alt="" />
                 </a>
-                <a href="#">
+                <a href="/">
                   <img src={linkedin} alt="" />
                 </a>
               </div>
               <div className="footer-links">
-                <a href="#">March22 Recap</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">General Terms</a>
-                <a href="#">Contact</a>
+                <a href="/">March22 Recap</a>
+                <a href="/">Privacy Policy</a>
+                <a href="/">General Terms</a>
+                <a href="/">Contact</a>
               </div>
               <div className="footer-country">
                 <img src={usa} alt="" />
-                <a href="#">United States (English)</a>
+                <a href="/">United States (English)</a>
               </div>
             </div>
           </div>

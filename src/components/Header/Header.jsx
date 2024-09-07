@@ -40,7 +40,7 @@ const Header = () => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/">Products</a>
+              <a href="/products">Products</a>
             </li>
             <li>
               <a href="/">Categories</a>
@@ -54,7 +54,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="button">
-          <img src={basket} alt="" />
+          <a href="/checkout"><img src={basket} alt="" /></a>
           <img src={Account} alt="" />
           <button onClick={handleLogout} className="logout">
            Logout
