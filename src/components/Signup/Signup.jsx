@@ -1,6 +1,13 @@
 import React, { useState, useContext } from 'react';
-import { AppContext } from '../context/AppContext';
+import { AppContext } from '../../context/AppContext';
 import { useNavigate } from 'react-router-dom';
+
+import "./Signup.css";
+import Frame59 from "../../Assets/Frame59.png";
+import Frame60 from "../../Assets/Frame60.png";
+import Frame61 from "../../Assets/Frame61.png";
+import visibility_off from "../../Assets/visibility_off.png";
+import icon from "../../Assets/icon.png";
 
 const Signup = () => {
   const { login } = useContext(AppContext);
@@ -15,11 +22,10 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <h2>Signup</h2>
-      <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
-      <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" />
-      <button onClick={handleSignup}>Signup</button>
+    <div className="container">
+      <div className="signup">
+        
+      </div>
     </div>
   );
 };
