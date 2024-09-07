@@ -2,8 +2,11 @@ import React from "react";
 import "./ProductList.css";
 import Image from "../../Assets/Image.png";
 import Added from "../../Assets/Added.png";
+// import Header from "../Header/Header";
+// import Footer from "../Footer/Footer";
 const Products = () => {
   return (
+    
     <div className="container">
       <div className="menu">
         <button className="menu-item active">Rocking chair</button>
@@ -127,7 +130,8 @@ const Products = () => {
           <button className="add-to-cart">Add to cart</button>
         </div>
       </div>
-    </div>
+    </div> 
+   
   );
 };
 

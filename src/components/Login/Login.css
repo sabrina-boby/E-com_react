@@ -90,7 +90,7 @@
   }
   .signup-btn {
     width: 100%;
-    padding: 13px;
+    padding: 20px;
     background-color: #000;
     color: #fff;
     border: none;
@@ -225,7 +225,7 @@
       height: 400px;
     }
     .form-box {
-      margin: 50px auto 0px auto;
+      margin: 0 auto;
     }
   }
   
