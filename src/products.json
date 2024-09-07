@@ -1,20 +1,56 @@
 [
-    {
-      "id": 1,
-      "name": "Recliner Chair Wood",
-      "price": 299.00,
-      "originalPrice": 350.00,
-      "discount": "30% OFF",
-      "description": "It has a backrest that can be tilted back, and often a footrest extended.",
-      "image": "../../Assets/chair1.png"
-    },
-    {
-      "id": 2,
-      "name": "Rocking Chair",
-      "price": 199.00,
-      "originalPrice": 250.00,
-      "discount": "20% OFF",
-      "description": "A classic rocking chair, ideal for your patio.",
-      "image": ""
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Recliner Chair Wood",
+    "price": 299.0,
+    "originalPrice": 350.0,
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended.",
+    "image": "../../Assets/chair1.png"
+  },
+  {
+    "id": 2,
+    "name": "Timber Ride Padded",
+    "price": 59.0,
+    "originalPrice": 75.0,
+    "discount": "30% OFF",
+    "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+    "image": "../../Assets/chair2.png"
+  },
+  {
+    "id": 3,
+    "name": "Colored Wooden Chair",
+    "price": 299.0,
+    "originalPrice": 350.0,
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "image": "../../Assets/chair3.png"
+  },
+  {
+    "id": 4,
+    "name": "Blank Bamboo Wicker",
+    "price": 165.0,
+    "originalPrice": 400.0,
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "image": "../../Assets/chair4.png"
+  },
+  {
+    "id": 5,
+    "name": "Isolated Wooden Rockr",
+    "price": 165.0,
+    "originalPrice": 350.0,
+    "discount": "30% OFF",
+    "description": "It has a backrest that can be tilted back, and often a footrest extended",
+    "image": "../../Assets/chair5.png"
+  },
+  {
+    "id": 6,
+    "name": "Minimal Empty Rocking",
+    "price": 299.0,
+    "originalPrice": 350.0,
+    "discount": "30% OFF",
+    "description": "A seat, especially for one person, usually having four legs for support.",
+    "image": "../../Assets/chair6.png"
+  }
+]
