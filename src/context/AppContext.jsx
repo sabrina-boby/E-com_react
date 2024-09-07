@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useEffect } from 'react';
 
 export const AppContext = createContext();
@@ -6,14 +5,13 @@ export const AppContext = createContext();
 // Define a static default user
 const defaultUser = {
   email: 'boboypakhi@gmail.com',
-  password: 'pochagalib',
+  password: '123456',
 };
 
 export const AppProvider = ({ children }) => {
   const [auth, setAuth] = useState(null);
-  
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState(null);
+  const [cart, setCart] = useState([]);  // Initialize cart as an empty array
 
   // On initial render, check if the user is already authenticated
   useEffect(() => {
@@ -60,17 +58,17 @@ export const AppProvider = ({ children }) => {
 
   // Function to add item to cart
   const addToCart = (product) => {
-    setCart([...cart, { ...product, quantity: 1 }]);
+    setCart(prevCart => [...prevCart, { ...product, quantity: 1 }]);
   };
 
   // Function to remove item from cart
   const removeFromCart = (productId) => {
-    setCart(cart.filter(item => item.id !== productId));
+    setCart(prevCart => prevCart.filter(item => item.id !== productId));
   };
 
   // Function to update item quantity
   const updateQuantity = (productId, quantity) => {
-    setCart(cart.map(item =>
+    setCart(prevCart => prevCart.map(item =>
       item.id === productId ? { ...item, quantity } : item
     ));
   };

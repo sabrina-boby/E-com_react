@@ -3,15 +3,36 @@ import "./Checkout.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { AppContext } from '../../context/AppContext';
+import chair1 from "../../Assets/chair1.png";
+import chair2 from "../../Assets/chair2.png";
+import chair3 from "../../Assets/chair3.png";
+import chair4 from "../../Assets/chair4.png";
+import chair5 from "../../Assets/chair5.png";
+import chair6 from "../../Assets/chair6.png";
+
 const AddToCard = () => {
   const { cart, updateQuantity, removeFromCart } = useContext(AppContext);
-
-  const calculateTotal = () => {
-    return cart.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
+  const imageMap = {
+    chair1: chair1,
+    chair2: chair2,
+    chair3: chair3,
+    chair4: chair4,
+    chair5: chair5,
+    chair6: chair6,
   };
+  const calculateTotal = () => {
+    // Check if cart is an array and has valid items
+    if (!Array.isArray(cart)) return '0.00';
+    return cart.reduce((total, item) => {
+      const itemPrice = item.price || 0;
+      const itemQuantity = item.quantity || 0;
+      return total + (itemPrice * itemQuantity);
+    }, 0).toFixed(2);
+  };
+
   return (
     <>
-      <Header></Header>
+      <Header />
       <div className="container">
         <div className="title">
           <h2>An overview of your order</h2>
@@ -22,18 +43,36 @@ const AddToCard = () => {
                   <div className="product-align">
                     <div className="product">
                       <div className="item-quantity">
-                        <button onClick={() => updateQuantity(item.id, item.quantity - 1)} disabled={item.quantity <= 1}>-</button>
+                        <button 
+                          onClick={() => updateQuantity(item.id, item.quantity - 1)} 
+                          disabled={item.quantity <= 1}
+                        >
+                          -
+                        </button>
                         <span className="quantity">{item.quantity}</span>
-                        <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                        <button 
+                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                        >
+                          +
+                        </button>
                       </div>
                       <div className="item-details">
-                        <img src={item.image} className="item-image" alt={item.name} />
-                        <span className="item-name">{item.name}</span>
+                        <img 
+                          src={imageMap[item.image]} // Provide a default image if item.image is null
+                          className="item-image" 
+                          alt={item.name || 'Item'} // Provide a default alt text
+                        />
+                        <span className="item-name">{item.name || 'Unknown Item'}</span>
                       </div>
                     </div>
-                    <button className="remove-btn" onClick={() => removeFromCart(item.id)}>&times;</button>
+                    <button 
+                      className="remove-btn" 
+                      onClick={() => removeFromCart(item.id)}
+                    >
+                      &times;
+                    </button>
                   </div>
-                  <span className="item-price">€{(item.price * item.quantity).toFixed(2)}</span>
+                  <span className="item-price">€{(item.price * item.quantity || 0).toFixed(2)}</span>
                 </div>
               ))}
             </div>
@@ -72,7 +111,7 @@ const AddToCard = () => {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };
