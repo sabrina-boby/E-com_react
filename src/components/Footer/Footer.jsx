@@ -11,12 +11,12 @@ const Footer = () => {
   return (
     <div className="body">
       <div className="container">
-        <footer class="footer">
+        <footer className="footer">
           <div className="footer-up">
-            <div class="footer-logo">
+            <div className="footer-logo">
               <img src={logo} alt="" />
             </div>
-            <div class="footer-column">
+            <div className="footer-column">
               <ul>
                 <h3>About US</h3>
                 <li>
@@ -39,7 +39,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div class="footer-column">
+            <div className="footer-column">
               <ul>
                 <h3>Explore EEVE</h3>
                 <li>
@@ -56,7 +56,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div class="footer-column">
+            <div className="footer-column">
               <ul>
                 <h3>Community & Support</h3>
                 <li>
@@ -73,8 +73,8 @@ const Footer = () => {
           </div>
 
           <div className="footer-down">
-            <div class="footer-bottom">
-              <div class="social-icons">
+            <div className="footer-bottom">
+              <div className="social-icons">
                 <a href="#">
                   <img src={facebook} alt="" />
                 </a>
@@ -88,13 +88,13 @@ const Footer = () => {
                   <img src={linkedin} alt="" />
                 </a>
               </div>
-              <div class="footer-links">
+              <div className="footer-links">
                 <a href="#">March22 Recap</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">General Terms</a>
                 <a href="#">Contact</a>
               </div>
-              <div class="footer-country">
+              <div className="footer-country">
                 <img src={usa} alt="" />
                 <a href="#">United States (English)</a>
               </div>
