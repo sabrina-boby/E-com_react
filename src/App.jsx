@@ -12,8 +12,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/footer" element={<Footer />} /> */}
-        {/* <Route path="/header" element={<Header />} /> */}
+        <Route path="/footer" element={<Footer />} />
+        <Route path="/header" element={<Header />} />
         <Route path="/" element={<Login />} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/signup" element={<Signup />} />
