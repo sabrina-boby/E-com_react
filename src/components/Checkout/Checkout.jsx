@@ -1,6 +1,10 @@
 import React from "react";
 import "./Checkout.css";
-import Frame77 from "../../Assets/Frame77.png";
+import chr1 from "../../Assets/chr1.png";
+import chr2 from "../../Assets/chr2.png";
+import chr3 from "../../Assets/chr3.png";
+import chr4 from "../../Assets/chr4.png";
+import chr5 from "../../Assets/chr5.png";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 const AddToCard = () => {
@@ -20,7 +24,7 @@ const AddToCard = () => {
                     <span className="quantity">+</span>
                   </div>
                   <div className="item-details">
-                    <img src={Frame77} className="item-image" alt="" />
+                    <img src={chr1} className="item-image" alt="" />
                     <span className="item-name">Recliner Chair Steel</span>
                   </div>
                 </div>
@@ -38,13 +42,13 @@ const AddToCard = () => {
                     <span className="quantity">+</span>
                   </div>
                   <div className="item-details">
-                    <img src={Frame77} class="item-image" alt="" />
-                    <span className="item-name">Recliner Chair Steel</span>
+                    <img src={chr2} class="item-image" alt="" />
+                    <span className="item-name">Gaming Chair</span>
                   </div>
                 </div>
                 <button className="remove-btn">&times;</button>
               </div>
-              <span className="item-price">€299.00</span>
+              <span className="item-price">€ 249.00</span>
             </div>
 
             <div className="cart-item">
@@ -56,13 +60,13 @@ const AddToCard = () => {
                     <span className="quantity">+</span>
                   </div>
                   <div className="item-details">
-                    <img src={Frame77} class="item-image" alt="" />
-                    <span className="item-name">Recliner Chair Steel</span>
+                    <img src={chr3} class="item-image" alt="" />
+                    <span className="item-name">Timber Ride Padded</span>
                   </div>
                 </div>
                 <button className="remove-btn">&times;</button>
               </div>
-              <span className="item-price">€299.00</span>
+              <span className="item-price">€59.00</span>
             </div>
 
             <div className="cart-item">
@@ -74,13 +78,13 @@ const AddToCard = () => {
                     <span className="quantity">+</span>
                   </div>
                   <div className="item-details">
-                    <img src={Frame77} class="item-image" alt="" />
-                    <span className="item-name">Recliner Chair Steel</span>
+                    <img src={chr4} class="item-image" alt="" />
+                    <span className="item-name">Isolated Wooden Rock</span>
                   </div>
                 </div>
                 <button className="remove-btn">&times;</button>
               </div>
-              <span className="item-price">€299.00</span>
+              <span className="item-price">€165.00</span>
             </div>
 
             <div className="cart-item">
@@ -92,8 +96,8 @@ const AddToCard = () => {
                     <span className="quantity">+</span>
                   </div>
                   <div className="item-details">
-                    <img src={Frame77} className="item-image" alt="" />
-                    <span className="item-name">Recliner Chair Steel</span>
+                    <img src={chr5} className="item-image" alt="" />
+                    <span className="item-name">Colored Wooden Chair</span>
                   </div>
                 </div>
                 <button className="remove-btn">&times;</button>

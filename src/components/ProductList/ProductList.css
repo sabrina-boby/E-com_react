@@ -9,10 +9,12 @@
   }
   .menu {
     /* max-width: 263px; */
+    margin: 80px 0;
     width: 100%;
     border-right: 1px solid rgb(223, 220, 220);
     padding-right: 20px;
     .menu-item {
+      margin-top: 30px;
       text-wrap: nowrap;
       background-color: white;
       border: none;
@@ -51,6 +53,7 @@
     border-left: 1px solid rgb(248, 245, 245);
   }
   .cards-section {
+    margin: 80px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -137,6 +140,45 @@
       }
     }
   }
+  /* =================*/
+  .pagination-parent{
+    width: 100%;
+    /* background: red; */
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .pagination-button,
+  .pagination-arrow {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .pagination-arrow:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+  }
+  
+  .pagination-button.active {
+    background-color: #000;
+    color: white;
+    border-color: #000;
+  }
+  
+  .pagination-ellipsis {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
   @media only screen and (max-width: 950px) {
     .container{
       width: 100%;

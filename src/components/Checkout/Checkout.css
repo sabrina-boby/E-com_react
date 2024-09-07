@@ -9,9 +9,8 @@
     display: flex;
     flex-direction: column;
     h2{
-      font-family: Barlow;
       font-weight: 600;
-      size: 28px;
+      font-size: 35px;
     }
   }
   .all-card-items {
