@@ -5,22 +5,37 @@ import ProductList from "./components/ProductList/ProductList";
 import Signup from "./components/Signup/Signup";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout/Checkout";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import ProtectedRoute from './components/ProtectedRoute'; // Import the protected route
+// import Header from "./components/Header/Header";
+// import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/footer" element={<Footer />} />
-        <Route path="/header" element={<Header />} />
+        {/* Public routes */}
         <Route path="/" element={<Login />} />
-        <Route path="/products" element={<ProductList />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
+
+        {/* Protected routes */}
+        <Route path="/products" element={
+          <ProtectedRoute>
+            <ProductList />
+          </ProtectedRoute>
+        } />
+        <Route path="/cart" element={
+          <ProtectedRoute>
+            <Cart />
+          </ProtectedRoute>
+        } />
+        <Route path="/checkout" element={
+          <ProtectedRoute>
+            <Checkout />
+          </ProtectedRoute>
+        } />
       </Routes>
     </Router>
+
   );
 };
 

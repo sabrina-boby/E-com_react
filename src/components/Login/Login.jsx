@@ -1,50 +1,3 @@
-// src/components/Login.jsx
-// import React, { useState, useContext } from 'react';
-// import { AppContext } from '../context/AppContext';
-// import { useNavigate } from 'react-router-dom';
-
-// const Login = () => {
-//   const { login } = useContext(AppContext);  // login should now be defined
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-//   const navigate = useNavigate();
-
-//   const handleLogin = () => {
-//     const user = { email, password };
-//     login(user);  // Call login from context
-//     navigate('/');  // Navigate to home page after login
-//   };
-
-//   return (
-//     <div className="flex flex-col items-center justify-center min-h-screen">
-//       <h2 className="text-2xl font-bold mb-4">Login</h2>
-//       <input
-//         type="email"
-//         value={email}
-//         onChange={(e) => setEmail(e.target.value)}
-//         placeholder="Email"
-//         className="border border-gray-300 p-2 rounded mb-2"
-//       />
-//       <input
-//         type="password"
-//         value={password}
-//         onChange={(e) => setPassword(e.target.value)}
-//         placeholder="Password"
-//         className="border border-gray-300 p-2 rounded mb-2"
-//       />
-//       <button
-//         onClick={handleLogin}
-//         className="bg-blue-500 text-white px-4 py-2 rounded mt-2"
-//       >
-//         Login
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Login;
-
-// Login.jsx
 import React, { useState, useContext } from 'react';
 import { AppContext } from '../../context/AppContext';
 import { useNavigate } from 'react-router-dom';
@@ -60,45 +13,78 @@ const Login = () => {
   const { login } = useContext(AppContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = () => {
     const user = { email, password };
-    login(user);
-    navigate('/products');
-  };
+   
+    const isSuccess = login(user); // Attempt login
 
+    if (isSuccess) {
+      navigate('/products');  // Redirect to products page if login successful
+    } else {
+      setError('Invalid credentials. Please sign up first.');  // Show error if login fails
+    }
+  };
   return (
     <div className="container">
-    <div className="form-box">
-      <h3>Welcome To </h3>
-      <h2><span className="brand">Furni<span className="blue-text">Flex</span></span></h2>
-      <p>Signup for purchase your desire products</p>
-      <form action="#" method="POST">
-        <div className="input-group name">
-          <input type="text" id="first-name" name="first-name" placeholder="First name (optional)"/>
-          <input type="text" id="last-name" name="last-name" placeholder="Last name (optional)"/>
+      <div className="signin-full">
+        <h3>Welcome Back!</h3>
+        <p>Enter your Credentials to access your account</p>
+        <div className="signin-body">
+          <form action="#" method="POST">
+            <div className="input-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email address"
+              />
+            </div>
+            <div className="input-group password">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Password"
+              />
+              <img className="show-pass" src={visibility_off} alt="" />
+            </div>
+            <a className="forgot-pass" href="/">
+              Forgot Password
+            </a>
+            <div className="checkbox-group">
+              <input type="checkbox" id="terms" name="terms" />
+              <label for="terms">
+                I agree to the{" "}
+                <a href="/" className="link-color">
+                  Terms & Policy
+                </a>
+              </label>
+            </div>
+            <button type="submit" onClick={handleLogin} className="signup-btn">
+              Sign In
+            </button>
+            {error && <p className="text-red-500 mt-2">{error}</p>}
+
+            <div className="separator">or</div>
+            <div className="social-signin">
+              <div className="social-btn">
+                <img src={Frame59} alt="" />
+              </div>
+              <div className="social-btn">
+                <img src={Frame60} alt="" />
+              </div>
+            </div>
+            <p className='signin'>Have an account? <a href="/signup" className="signin-color" >Sign Up</a></p>
+          </form>
         </div>
-        <div className="input-group">
-          <input type="email" id="email" name="email" placeholder="Email address"/>
-        </div>
-        <div className="input-group password">
-          <input type="password" id="password" name="password" placeholder="Password"/>
-          <img className="show-pass" src={visibility_off} alt="" />
-        </div>
-        <div className="checkbox-group">
-            <input type="checkbox" id="terms" name="terms"/>
-          <label for="terms">I agree to the <a href="#" className="link-color">Terms & Policy</a></label>
-        </div>
-        <button type="submit" className="signup-btn">Signup</button>
-      </form>
-      <div className="separator">or</div>
-      <div className="social-signin">
-        <div className="social-btn"><img src={Frame59} alt="" /></div>
-        <div className="social-btn"><img src={Frame60} alt="" /></div>
       </div>
-      <p>Have an account? <a href="#" className="signin-color">Sign In</a></p>
-    </div>
       <div className="img-section">
         <img src={Frame61} alt="" />
         <div className="text">
