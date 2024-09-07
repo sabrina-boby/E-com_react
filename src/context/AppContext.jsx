@@ -11,6 +11,9 @@ const defaultUser = {
 
 export const AppProvider = ({ children }) => {
   const [auth, setAuth] = useState(null);
+  
+  const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState(null);
 
   // On initial render, check if the user is already authenticated
   useEffect(() => {
@@ -42,8 +45,42 @@ export const AppProvider = ({ children }) => {
     localStorage.removeItem('auth');
   };
 
+  // Function to fetch products
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch('/products.json');
+      if (!response.ok) throw new Error('Network response was not ok');
+      const data = await response.json();
+      setProducts(data);
+      console.log("json data", data);
+    } catch (error) {
+      console.error("Failed to fetch products", error);
+    }
+  };
+
+  // Function to add item to cart
+  const addToCart = (product) => {
+    setCart([...cart, { ...product, quantity: 1 }]);
+  };
+
+  // Function to remove item from cart
+  const removeFromCart = (productId) => {
+    setCart(cart.filter(item => item.id !== productId));
+  };
+
+  // Function to update item quantity
+  const updateQuantity = (productId, quantity) => {
+    setCart(cart.map(item =>
+      item.id === productId ? { ...item, quantity } : item
+    ));
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   return (
-    <AppContext.Provider value={{ auth, login, signup, logout }}>
+    <AppContext.Provider value={{ auth, login, signup, logout, products, addToCart, cart, removeFromCart, updateQuantity }}>
       {children}
     </AppContext.Provider>
   );

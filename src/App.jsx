@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute'; // Import the protecte
 // import Header from "./components/Header/Header";
 // import Footer from "./components/Footer/Footer";
 
+
 const App = () => {
   return (
     <Router>
